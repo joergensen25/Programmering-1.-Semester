@@ -1,6 +1,6 @@
 package lektion4.opgave1;
 
-public class Main {
+public class Numbers {
 
     public static void main(String[] args) {
         int i = 5;

@@ -1,9 +1,9 @@
 package lektion4.opgave2;
 
-public class Main {
+public class EvenNumbers {
     public static void main(String[] args) {
-        System.out.println(evenNumbers(0));
-        System.out.println(qubicNumbers(1000));
+        System.out.println(qubicNumbers(100));
+        System.out.println(evenNumbers(100));
     }
    public static int evenNumbers(int limit) {
         int sum = 0;

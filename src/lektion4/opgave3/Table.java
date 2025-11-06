@@ -2,6 +2,7 @@ package lektion4.opgave3;
 
 public class Table {
     public static void main(String[] args) {
+        smallTable(9);
         largeTable();
 
     }

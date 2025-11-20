@@ -13,7 +13,6 @@ public class Salgsannonce {
     private Sælger sælger;
 
     // associering SalgsAnnonce --> 0..* Vare
-    // TODO
     private final ArrayList<Vare> varer = new ArrayList<>();
 
     Salgsannonce(Sælger sælger) { // OBS: package visible (Er ikke public = Kan kun bruges i model-package)

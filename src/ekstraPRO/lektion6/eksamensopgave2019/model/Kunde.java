@@ -1,5 +1,6 @@
 package ekstraPRO.lektion6.eksamensopgave2019.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Kunde {
@@ -70,5 +71,15 @@ public class Kunde {
     // returner bestiltePladser
 
     // S5
-    // TODO
+
+    public ArrayList<Plads> bestiltePladserTilForestillingPåDag(Forestilling forestilling, LocalDate dato) {
+        ArrayList<Plads> bestiltePladser = new ArrayList<>();
+
+        for (Bestilling bestilling : bestillinger) {
+            if (bestilling.getForestilling().equals(forestilling) && bestilling.getDato().equals(dato)) {
+                bestiltePladser.addAll(bestilling.getPladser());
+            }
+        }
+        return bestiltePladser;
+    }
 }

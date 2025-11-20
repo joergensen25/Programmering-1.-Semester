@@ -70,7 +70,15 @@ public class Forestilling {
     // return antalBestiltePladser
 
     // S3
-    // TODO
+    public int antalBestiltePladserPåDag(LocalDate dato) {
+       int antalBestiltePladser = 0;
+        for (Bestilling bestilling : bestillinger) {
+            if (bestilling.getDato().equals(dato)) {
+                antalBestiltePladser += bestilling.getPladser().size();
+            }
+        }
+       return antalBestiltePladser;
+    }
 
     //-----------------------------------------------------
     // Opgave S4
@@ -88,6 +96,15 @@ public class Forestilling {
     // return succesDato
 
     // S4
-    // TODO
-
+    public LocalDate succesDato() {
+       LocalDate succesDato = null;
+       int maxAntalBestiltePladser = 0; // !dato.isAfter(slutDato)
+       for (LocalDate dato = startDato; !dato.isAfter(slutDato); dato = dato.plusDays(1)) {
+           if (antalBestiltePladserPåDag(dato) > maxAntalBestiltePladser) {
+               maxAntalBestiltePladser = antalBestiltePladserPåDag(dato);
+               succesDato = dato;
+           }
+       }
+       return succesDato;
+    }
 }

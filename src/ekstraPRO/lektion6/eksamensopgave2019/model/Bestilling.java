@@ -110,5 +110,12 @@ public class Bestilling {
 
     // S2
     // TODO
+    public int samletPris() {
+        int samletPris = 0;
+        for (Plads plads : pladser) {
+            samletPris += plads.getPris();
+        }
+        return samletPris;
+    }
 
 }

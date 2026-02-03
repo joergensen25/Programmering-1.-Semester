@@ -1,0 +1,41 @@
+package projekter.semesteropgaveJan2019.model;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Forestilling {
+
+    private String navn;
+    private LocalDate startDato;
+    private LocalDate slutDato;
+
+    private ArrayList<Bestilling> bestillinger;
+
+    public Forestilling(String navn, LocalDate startDato, LocalDate slutDato) {
+        this.navn = navn;
+        this.startDato = startDato;
+        this.slutDato = slutDato;
+        this.bestillinger = new ArrayList<>();
+    }
+
+    public String getNavn() {
+        return navn;
+    }
+
+    public LocalDate getStartDato() {
+        return startDato;
+    }
+
+    public LocalDate getSlutDato() {
+        return slutDato;
+    }
+
+    public ArrayList<Bestilling> getBestillinger() {
+        return bestillinger;
+    }
+
+    public void addBestilling(Bestilling bestilling) {
+        bestillinger.add(bestilling);
+        bestilling.setForestilling(this);
+    }
+}

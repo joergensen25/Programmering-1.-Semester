@@ -1,7 +1,7 @@
 package main.java.semester1.lektion30.opgave02;
 
 import main.java.semester1.lektion30.opgave02.models.*;
-import semester1.lektion30.opgave02.models.*;
+import main.java.semester1.lektion30.opgave02.models.*;
 import main.java.semester1.lektion30.opgave02.storage.Storage;
 
 import java.time.LocalDate;

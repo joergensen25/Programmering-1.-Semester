@@ -1,7 +1,7 @@
 package main.java.semester1.lektion30.opgave01;
 
 import main.java.semester1.lektion30.opgave01.models.*;
-import semester1.lektion30.opgave01.models.*;
+import main.java.semester1.lektion30.opgave01.models.*;
 
 public class Main {
 

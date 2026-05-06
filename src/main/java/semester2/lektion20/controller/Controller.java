@@ -4,8 +4,8 @@ import main.java.semester2.lektion20.ordination.Laegemiddel;
 import main.java.semester2.lektion20.ordination.Ordination;
 import main.java.semester2.lektion20.ordination.Patient;
 import main.java.semester2.lektion20.storage.StorageInterface;
-import semester2.lektion20.ordination.*;
-import semester2.lektion20.storage.*;
+import main.java.semester2.lektion20.ordination.*;
+import main.java.semester2.lektion20.storage.*;
 
 public class Controller {
     private StorageInterface storage;

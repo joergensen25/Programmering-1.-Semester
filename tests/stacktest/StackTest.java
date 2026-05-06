@@ -10,9 +10,9 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import semester2.lektion10.src.ArrayStack;
-import semester2.lektion10.src.NodeStack;
-import semester2.lektion10.src.StackI;
+import main.java.semester2.lektion10.src.ArrayStack;
+import main.java.semester2.lektion10.src.NodeStack;
+import main.java.semester2.lektion10.src.StackI;
 
 @TestMethodOrder(OrderAnnotation.class)
 class StackTest

@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
-import semester2.lektion19.opgave1.BogTitel;
-import semester2.lektion19.opgave1.Indkoeber;
-import semester2.lektion19.opgave1.Kunde;
+import main.java.semester2.lektion19.opgave1.BogTitel;
+import main.java.semester2.lektion19.opgave1.Indkoeber;
+import main.java.semester2.lektion19.opgave1.Kunde;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

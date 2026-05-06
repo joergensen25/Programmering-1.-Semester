@@ -1,11 +1,11 @@
 package controller;
 
 import org.junit.jupiter.api.Test;
-import semester2.lektion20.controller.Controller;
-import semester2.lektion20.ordination.Laegemiddel;
-import semester2.lektion20.ordination.Patient;
-import semester2.lektion20.storage.Storage;
-import semester2.lektion20.storage.StorageInterface;
+import main.java.semester2.lektion20.controller.Controller;
+import main.java.semester2.lektion20.ordination.Laegemiddel;
+import main.java.semester2.lektion20.ordination.Patient;
+import main.java.semester2.lektion20.storage.Storage;
+import main.java.semester2.lektion20.storage.StorageInterface;
 
 import java.util.ArrayList;
 

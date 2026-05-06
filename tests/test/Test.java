@@ -1,4 +1,6 @@
-import semester2.lektion16.opgave2.Palindrom;
+package test;
+
+import main.java.semester2.lektion16.opgave2.Palindrom;
 
 class Test {
 

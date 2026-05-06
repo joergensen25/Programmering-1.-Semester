@@ -1,6 +1,6 @@
 
 import org.junit.jupiter.api.Test;
-import semester1.lektion2.opgave4.TaxCalculator;
+import main.java.semester1.lektion2.opgave4.TaxCalculator;
 
 
 

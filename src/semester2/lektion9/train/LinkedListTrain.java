@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 public class LinkedListTrain
 {
     private WagonNode firstWagon;
+    private int count;
 
     /**
      * Constructs an empty linked list train.
@@ -41,6 +42,7 @@ public class LinkedListTrain
         // TODO: Assignment 1: Implement this add method...
         wagon.setNextWagon(firstWagon);
         firstWagon = wagon;
+        count++;
 
     }
 
@@ -63,6 +65,7 @@ public class LinkedListTrain
         firstWagon = firstWagon.getNextWagon();
         // Fjerner forbindelsen mellem den gamle firstWagon og den næste wagon
         removed.setNextWagon(null);
+        count--;
         // Returnerer den fjernede (første) wagon
         return removed;
 
@@ -94,6 +97,10 @@ public class LinkedListTrain
         // throw new UnsupportedOperationException("Not implemented");
     }
 
+    public int count2() {
+        return count;
+    }
+
     /**
      * Removes the first wagon node in the linked list train.
      * 
@@ -113,6 +120,7 @@ public class LinkedListTrain
         // Tjekker om den ønskede vogn er den første
         if (firstWagon == wagon) {
             removeFirst();
+            count--;
             return true;
         }
 
@@ -126,6 +134,7 @@ public class LinkedListTrain
             if (current == wagon) {
                 previous.setNextWagon(current.getNextWagon());
                 current.setNextWagon(null);
+                count--;
                 return true;
             }
             // Ellers går vi videre:
@@ -150,6 +159,7 @@ public class LinkedListTrain
         // Hvis listen er tom indsættes wagon som den første:
         if (firstWagon == null) {
             addFirst(wagon);
+            count++;
             return;
         }
         WagonNode current = firstWagon;
@@ -161,7 +171,6 @@ public class LinkedListTrain
         }
         wagon.setNextWagon(current.getNextWagon());
         current.setNextWagon(wagon);
-
 
     }
 }

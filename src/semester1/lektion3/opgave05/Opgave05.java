@@ -8,13 +8,13 @@ public class Opgave05 {
         System.out.print("Indtast nypris: ");
         double price = input.nextDouble();
         double registrationFee = calculateFee(price);
-        System.out.println("En bil der koster " + price + " uden registreringsafgift, skal man betale " +
-                registrationFee + " i registreringsafgift.");
+        System.out.println("For en bil der koster " + price + " kr., er registreringsafgiften " +
+                registrationFee);
         input.close();
     }
 
     public static double calculateFee(double price) {
-        double fee = 0;
+        double fee;
         if (price <= 67800) {
             fee = price * 0.25;
         } else if (price <= 210600) {
@@ -24,7 +24,8 @@ public class Opgave05 {
         } else {
             double highPrice = price - 210600;
             double mediumPrice = price - highPrice - 67800;
-            fee = (highPrice*1.5) + (mediumPrice*0.85) + (67800*0.25);
+            fee = (highPrice * 1.5) + (mediumPrice * 0.85)
+                    + (67800 * 0.25);
         }
         return fee;
     }

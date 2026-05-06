@@ -4,34 +4,31 @@ import java.util.Scanner;
 
 public class TaxCalculator {
     public static void main(String[] args) {
+        // Opretter et Scanner-objekt
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Indtast månedlig indkomst: ");
+
+        // Beder brugeren indtaste indkomst
+        System.out.print("Indtast månedlig indkomst ");
         int income = scanner.nextInt();
-        double tax = calculateTax(income);
-        System.out.printf("Månedlig skat er: %.2f kr.%n", tax);
+        int tax = calculateTax(income);
+        System.out.println("Årlig skat er " + tax);
     }
 
-    public static double calculateTax(int monthlyIncome) {
-        final int BASE_DEDUCTION = 48_000;
-        final int HIGH_TAX_THRESHOLD = 568_900;
-
-        int yearlyIncome = monthlyIncome * 12;
-        int taxIncome = yearlyIncome - BASE_DEDUCTION;
-
-        if (taxIncome <= 0) {
+    public static int calculateTax(int monthlyIncome) {
+        final int BASE_DECUTION = 48_000;
+        final int HIGHTAX_MIN = 568_900;
+        int yearlyIncome = (monthlyIncome * 12) - BASE_DECUTION;
+        if (yearlyIncome <= BASE_DECUTION) {
             return 0;
         }
 
-        double yearlyTax = taxIncome * 0.37;
-        double monthlyTax = yearlyTax / 12;
+        int yearlyTax = yearlyIncome * 37 / 100;
 
-        if (taxIncome > HIGH_TAX_THRESHOLD) {
-            double highTaxIncome = taxIncome - HIGH_TAX_THRESHOLD;
-            double yearlyHighTax = highTaxIncome * 15 / 100;
-            double monthlyHighTax = yearlyHighTax / 12;
-
-            return monthlyTax + monthlyHighTax;
+        if (yearlyIncome > HIGHTAX_MIN) {
+            int highTax = (yearlyIncome - HIGHTAX_MIN) * 15 / 100;
+            return (highTax + yearlyTax);
+        } else {
+            return yearlyTax;
         }
-        return monthlyTax;
     }
 }

@@ -1,0 +1,4 @@
+package main.java.semester2.lektion2.opgave4;
+
+public class Cirkel {
+}

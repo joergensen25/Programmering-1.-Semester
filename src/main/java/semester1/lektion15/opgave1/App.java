@@ -1,0 +1,9 @@
+package main.java.semester1.lektion15.opgave1;
+
+import javafx.application.Application;
+
+public class App {
+    public static void main(String[] args) {
+        Application.launch(Opgave1.class);
+    }
+}
